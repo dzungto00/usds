@@ -1,0 +1,47 @@
+.requiredField {
+   font-weight: bold;
+   color: red
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr; /* One column spanning the full width */
+  grid-template-rows: 0.5fr 5fr 0.5fr; /* Header and footer height adjust to content, body takes remaining space */
+  grid-template-areas:
+    "header"
+    "body"
+    "footer";
+  min-width: 100vh;
+  min-height: 100vh; /* Ensures the grid container takes at least the full viewport height */
+}
+
+.header {
+  display: flex;         /* Make the header itself a flex container */
+  justify-content: center; /* Center content horizontally */
+  align-items: center;     /* Center content vertically */
+  text-align: center;      /* Ensures text (inline content) is centered */
+  background-color: lightblue;
+  padding: 5px;
+}
+
+.body {
+  grid-area: body;
+  /* Additional styling for body */
+  background-color: lightgray;
+  padding: 5px;
+}
+
+.footer {
+  display: flex;         /* Make the header itself a flex container */
+  justify-content: center; /* Center content horizontally */
+  align-items: center;     /* Center content vertically */
+  text-align: center;      /* Ensures text (inline content) is centered */
+  /* Additional styling for footer */
+  background-color: lightblue;
+  padding: 5px;
+}
+
+.form-usds {
+    padding: 15px;
+    margin: auto;
+}

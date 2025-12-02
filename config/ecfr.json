@@ -1,0 +1,92 @@
+[
+  {
+    "serviceName": "Admin Service",
+    "serviceApi": [
+      {
+        "description": "Agencies",
+        "api": "api/admin/v1/agencies.json",
+		"localFileName": "Admin Agencies"
+      },
+      {
+        "description": "Corrections route returns all eCFR corrections",
+        "api": "api/admin/v1/corrections.json",
+		"localFileName": "Admin Corrections Route"
+      },
+      {
+        "description": "Corrections title route returns all corrections for the supplied title",
+        "api": "api/admin/v1/corrections/title/{title}.json",
+		"localFileName": ""
+      }
+    ]
+  },
+  {
+    "serviceName": "Search Service",
+    "serviceApi": [
+      {
+        "description": "Search results",
+        "api": "api/search/v1/results",
+		"localFileName": "Search Results"
+      },
+      {
+        "description": "Search result count",
+        "api": "api/search/v1/count",
+		"localFileName": "Search Result Count"
+      },
+      {
+        "description": "Search summary details",
+        "api": "api/search/v1/summary",
+		"localFileName": "Search Summary"
+      },
+      {
+        "description": "Search result counts by date",
+        "api": "api/search/v1/counts/daily",
+		"localFileName": "Search Date Result Counts"
+      },
+      {
+        "description": "Search result counts by title",
+        "api": "api/search/v1/counts/titles",
+		"localFileName": "Search Title Result Counts"
+      },
+      {
+        "description": "Search result counts by hierarchy",
+        "api": "api/search/v1/counts/hierarchy",
+		"localFileName": "Search Hierarchy Result Counts"
+      },
+      {
+        "description": "Search suggestions",
+        "api": "api/search/v1/suggestions",
+		"localFileName": "Search Suggestions"
+      }
+    ]
+  },
+  {
+    "serviceName": "Versioner Service",
+    "serviceApi": [
+      {
+        "description": "Ancestors route returns all ancestors",
+        "api": "api/versioner/v1/ancestry/{date}/title-{title}.json",
+		"localFileName": ""
+      },
+      {
+        "description": "Source XML for a title or subset of a title",
+        "api": "api/versioner/v1/full/{date}/title-{title}.xml",
+		"localFileName": ""
+      },
+      {
+        "description": "Structure JSON for a title",
+        "api": "api/versioner/v1/structure/{date}/title-{title}.json",
+		"localFileName": ""
+      },
+      {
+        "description": "Summary information about each title",
+        "api": "api/versioner/v1/titles.json",
+		"localFileName": "Versioner Summary Title Information"
+      },
+      {
+        "description": "Returns an array of all sections and appendices inside a title",
+        "api": "api/versioner/v1/versions/title-{title}.json",
+		"localFileName": ""
+      }
+    ]
+  }
+]

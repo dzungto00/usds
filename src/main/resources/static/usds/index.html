@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="ISO-8859-1">
+<title>USDS - Code of Federal Regulations</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/usds.css" rel="stylesheet">
+<script src="scripts/bootstrap.js"></script>
+<script src="scripts/jquery.min.js"></script>
+<script src="scripts/usds.js"></script>
+</head>
+<body>
+    <div class="grid-container">
+      <header class="header">
+          <h3>USDS - Code of Federal Regulations</h3>
+      </header>
+      <main class="body">
+          <div class="container-fluid">
+          <table>
+              <tr>
+                  <td>
+                      <label>US DOGE SERVICES</label>
+                  </td>
+                  <td>
+                      <select id="serviceSelection" onchange="selectServiceApi(this.value)"></select>
+                  </td>
+                  <td>
+                      <label id="apiLabel" style="display:none">USDS API</label>
+                  </td>
+                  <td>
+                      <select id="apiSelection" style="display:none"
+                         onchange="executeApi(this.options[this.selectedIndex].text, this.value)"></select>
+                  </td>
+              </tr>
+              <tr>
+                  <td colspan="4">
+                      <div id="links"></div>
+                  </td>
+              </tr>
+              <tr>
+                  <td colspan="4">
+                      <textarea id="output" rows="10" cols="150" style="display:none"></textarea>
+                  </td>
+              </tr>
+          </table>
+          </div>
+      </main>
+      <footer class="footer">
+          <div id="status">Initializing</div>
+          <div id="progress">
+              <progress></progress>
+          </div>
+      </footer>
+    </div>
+
+    <script>initialize();</script>
+</body>
+</html>
